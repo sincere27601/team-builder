@@ -5,50 +5,30 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 
-class App extends useState {
+
+
+class Item extends useState {
     state = {
-        listitems: [
-            {
-                id: 0,
-                Name: "James",
-                Location: "Florida" 
-            },
-            {
-                id: 1,
-                Name: "Robert",
-                Location: "New York"
-            },
-            {
-                id: 2,
-                Name: "Edgar",
-                Location: "Chicago"
-            },
-            {
-                id: 3,
-                Name: "Susan",
-                Location: "Atlanta"
-            },
-            {
-                id: 4,
-                Name: "Mark",
-                Location: "Seattle"
-            }
-        ]
+        teammembers: ['member 1', 'member  2', 'member 3']
     };
+
 
     render() {
         return (
-                <ul className="App">
-                    {this.state.listitems.map(listitem => (
-                        <li key={listitem.id} className={listitem.modifier}>
-                            {listitem.context}
+            <React.Fragment>
+                <ul className="member-group">
+                    {this.state.teammembers.map(member => (
+                        <li className="member-group-item member-group-item-primary">
+                            {member}
                         </li>
                     ))}
                 </ul>
-            
+            </React.Fragment>
         );
     }
 }
+  
+
 
 export default Item;
 
