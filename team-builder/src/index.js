@@ -18,8 +18,11 @@ class Item extends useState {
             <React.Fragment>
                 <ul className="member-group">
                     {this.state.teammembers.map(member => (
-                        <li className="member-group-item member-group-item-primary">
-                            {member}
+
+                        <li 
+                        key= {member}
+                        className="member-group-item member-group-item-primary">
+                             {member}
                         </li>
                     ))}
                 </ul>
